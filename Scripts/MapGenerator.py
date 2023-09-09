@@ -6,9 +6,9 @@ class MapGenerator:
 
     def __init__(self, scrn):
         self.scrn = scrn
-        self.img0 = Sprite("Tilesets\MissingTexture.png", self.scrn)
-        self.img1 = Sprite("Tilesets\Flor.png", self.scrn)
-        self.img2 = Sprite("Tilesets\GrassTop.png", self.scrn)
+        # self.img0 = Sprite("Tilesets\\MissingTexture.png", self.scrn)
+        # self.img1 = Sprite("Tilesets\\Flor.png", self.scrn)
+        # self.img2 = Sprite("Tilesets\\GrassTop.png", self.scrn)
 
     def load(self, filename):
         imgMap = Sprite(filename, self.scrn)
