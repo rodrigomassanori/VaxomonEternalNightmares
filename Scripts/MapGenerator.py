@@ -12,12 +12,12 @@ class MapGenerator():
 
     def load(self, filename):
         imgMap = Sprite(filename, self.scrn)
-        self.mapSize = imgMap.imgae.get_size()
+        self.mapSize = imgMap.image.get_size()
         self.mat = [[0] * self.mapSize[1] for _ in range(self.mapSize[0])]
         
         for i in range(0, self.mapSize[0]):
             for j in range(0, self.mapSize[1]):
-                color = imgMap.imgae.get_at((i, j))
+                color = imgMap.image.get_at((i, j))
 
                 if color == (0, 0, 0):
                     self.mat[i][j] = 0
