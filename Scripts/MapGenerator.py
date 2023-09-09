@@ -3,30 +3,29 @@ import Tilesets
 class MapGenerator:
     TileSetX = 64
     TileSetY = 64
+    @staticmethod
+    def InitMap(scrn):
+        img0 = Tilesets("Tilesets\\MissingTexture.png", scrn)
+        img1 = Tilesets("Tilesets\\Flor.png", scrn)
+        img2 = Tilesets("Tilesets\\GrassTop.png", scrn)
 
-    def __init__(self, scrn):
-        self.scrn = scrn
-        self.img0 = Tilesets("Tilesets\\MissingTexture.png", self.scrn)
-        self.img1 = Tilesets("Tilesets\\Flor.png", self.scrn)
-        self.img2 = Tilesets("Tilesets\\GrassTop.png", self.scrn)
-
-    def load(self, filename):
-        imgMap = Tilesets(filename, self.scrn)
-        self.mapSize = imgMap.image.get_size()
-        self.mat = [[0] * self.mapSize[1] for _ in range(self.mapSize[0])]
+    def load(filename, scrn):
+        imgMap = Tilesets(filename, scrn)
+        mapSize = imgMap.image.get_size()
+        mat = [[0] * mapSize[1] for _ in range(mapSize[0])]
         
-        for i in range(0, self.mapSize[0]):
-            for j in range(0, self.mapSize[1]):
+        for i in range(0, mapSize[0]):
+            for j in range(0, mapSize[1]):
                 color = imgMap.image.get_at((i, j))
 
                 if color == (0, 0, 0):
-                    self.mat[i][j] = 0
+                    mat[i][j] = 0
                     
                 elif color == (255, 255, 255):
-                    self.mat[i][j] = 1
+                    mat[i][j] = 1
                     
                 else:
-                    self.mat[i][j] = -1
+                    mat[i][j] = -1
 
     def draw(self):
         for i in range(0, self.mapSize[0]):

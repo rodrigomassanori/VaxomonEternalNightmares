@@ -27,8 +27,8 @@ class Game:
                     quit()
 
             scrn.fill(backGroundColor)
-            Map.load("Tilesets\\map.png")
-            Map.draw()
+            # Map.load("Tilesets\\map.png")
+            # Map.draw()
             pygame.display.flip()
             clock.tick(60)
 
