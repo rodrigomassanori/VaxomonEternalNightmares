@@ -1,5 +1,5 @@
 import pygame
-from Scripts.MapGenerator import MapGenerator
+from MapGenerator import MapGenerator
 
 class Game:
     @staticmethod
