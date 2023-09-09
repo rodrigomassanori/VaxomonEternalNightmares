@@ -1,6 +1,6 @@
 from Sprite import Sprite
 
-class MapGenerator():
+class MapGenerator:
     TileSetX = 64
     TileSetY = 64
 
