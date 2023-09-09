@@ -15,7 +15,6 @@ class Game:
         scrn = pygame.display.set_mode(Display)
         clock = pygame.time.Clock()
         # Map = MapGenerator(scrn)
-
         while GameIsRunning:
             for event in pygame.event.get():
                 if event.type == pygame.KEYDOWN:
