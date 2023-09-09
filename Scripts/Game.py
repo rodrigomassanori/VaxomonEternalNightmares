@@ -28,7 +28,7 @@ class Game:
                     quit()
 
             scrn.fill(backGroundColor)
-            Map.load("Tilesets\\map.png")
+            Map.load("Tilesets\map.png")
             Map.draw()
 
             pygame.display.flip()
