@@ -1,4 +1,4 @@
-from Scripts.Sprite import Sprite
+from Sprite import Sprite
 
 class MapGenerator():
     TileSetX = 64
