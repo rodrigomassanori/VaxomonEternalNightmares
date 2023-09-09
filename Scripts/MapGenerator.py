@@ -1,4 +1,4 @@
-from Tilesets import Tilesets
+import Tilesets
 
 class MapGenerator:
     TileSetX = 64
