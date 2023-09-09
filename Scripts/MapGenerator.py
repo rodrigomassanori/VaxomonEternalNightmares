@@ -1,4 +1,4 @@
-from Sprite import Sprite
+from Tilesets import Tilesets
 
 class MapGenerator:
     TileSetX = 64
@@ -6,12 +6,12 @@ class MapGenerator:
 
     def __init__(self, scrn):
         self.scrn = scrn
-        # self.img0 = Sprite("Tilesets\\MissingTexture.png", self.scrn)
-        # self.img1 = Sprite("Tilesets\\Flor.png", self.scrn)
-        # self.img2 = Sprite("Tilesets\\GrassTop.png", self.scrn)
+        self.img0 = Tilesets("Tilesets\\MissingTexture.png", self.scrn)
+        self.img1 = Tilesets("Tilesets\\Flor.png", self.scrn)
+        self.img2 = Tilesets("Tilesets\\GrassTop.png", self.scrn)
 
     def load(self, filename):
-        imgMap = Sprite(filename, self.scrn)
+        imgMap = Tilesets(filename, self.scrn)
         self.mapSize = imgMap.image.get_size()
         self.mat = [[0] * self.mapSize[1] for _ in range(self.mapSize[0])]
         
