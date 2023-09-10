@@ -4,12 +4,11 @@ class MapGenerator:
 
     @staticmethod
     def InitMap():
-        img0 = "Tilesets/MissingTexture.png"
-        img1 = "Tilesets/Floor.png"
-        img2 = "Tilesets/GrassTop.png"
+        img0 = "Tilesets/Floor.png"
 
-    def load(filename):
-        imgMap = filename
+    @staticmethod
+    def load(img0 = "Tilesets/Floor.png"):
+        imgMap = img0
         mapSize = imgMap.image.get_size()
         mat = [[0] * mapSize[1] for _ in range(mapSize[0])]
 
