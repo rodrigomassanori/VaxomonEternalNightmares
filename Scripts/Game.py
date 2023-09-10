@@ -12,9 +12,9 @@ class Game:
         pygame.init()
         pygame.display.set_caption(Title)
         Display = (Width, Height)
-        scrn = pygame.display.set_mode(Display)
+        Screen = pygame.display.set_mode(Display)
         clock = pygame.time.Clock()
-        Map = MapGenerator(scrn)
+
         while GameIsRunning:
             for event in pygame.event.get():
                 if event.type == pygame.KEYDOWN:
@@ -26,9 +26,7 @@ class Game:
                     pygame.quit()
                     quit()
 
-            scrn.fill(backGroundColor)
-            Map.load("Tilesets/map.png")
-            Map.draw()
+            Screen.fill(backGroundColor)
             pygame.display.flip()
             clock.tick(60)
 
