@@ -1,16 +1,14 @@
-import Tilesets
-
 class MapGenerator:
     TileSetX = 64
     TileSetY = 64
     @staticmethod
     def InitMap(scrn):
-        img0 = Tilesets("Tilesets\\MissingTexture.png", scrn)
-        img1 = Tilesets("Tilesets\\Flor.png", scrn)
-        img2 = Tilesets("Tilesets\\GrassTop.png", scrn)
+        img0 = ("Tilesets/MissingTexture.png", scrn)
+        img1 = ("Tilesets/Flor.png", scrn)
+        img2 = ("Tilesets/GrassTop.png", scrn)
 
     def load(filename, scrn):
-        imgMap = Tilesets(filename, scrn)
+        imgMap = (filename, scrn)
         mapSize = imgMap.image.get_size()
         mat = [[0] * mapSize[1] for _ in range(mapSize[0])]
         
