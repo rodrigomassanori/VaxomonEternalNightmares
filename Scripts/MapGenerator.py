@@ -5,7 +5,7 @@ class MapGenerator:
     @staticmethod
     def InitMap():
         img0 = "Tilesets/MissingTexture.png"
-        img1 = "Tilesets/Flor.png"
+        img1 = "Tilesets/Floor.png"
         img2 = "Tilesets/GrassTop.png"
 
     def load(filename):
