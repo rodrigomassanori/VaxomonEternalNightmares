@@ -1,6 +1,5 @@
 import pygame
 from Scripts.MapGenerator import MapGenerator
-import rubato as Rub
 
 class Game:
     @staticmethod
